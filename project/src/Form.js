@@ -29,7 +29,7 @@ const Form = () => {
   var totalSprayTime = 0;
 
   useEffect (()=>{
-    axios.get('/job', {
+    axios.get('https://job-scheduling-api.vercel.app/job', {
             params: {
               date: newjob.date,
             }
@@ -259,7 +259,7 @@ const Form = () => {
    function jobconfirmation (cost){
 
     if (cost <= 620) {
-     axios.post('/job', newjob)
+     axios.post('https://job-scheduling-api.vercel.app/job', newjob)
     .then(function (response) {
       console.log(response);
       alert`job added Successfully.`;
