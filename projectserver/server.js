@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://job-scheduling-frontend.vercel.app/"],
+    origin: ["https://job-scheduling-frontend.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
