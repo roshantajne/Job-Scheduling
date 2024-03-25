@@ -10,7 +10,11 @@ const jobrouter = require('./routes/api/Job');
 const bodyParser = require('body-parser');
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["https://job-scheduling-api.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
 app.use(bodyParser.json())
 // 3. we nwwd to register our router
 app.use(jobrouter);
