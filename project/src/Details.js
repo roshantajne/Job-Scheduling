@@ -15,7 +15,7 @@ const Details = () => {
 const [jobs,setJobs] = useState([]);
 const getJobs = async () => {
     try {
-        axios.get('/job', {
+        axios.get('https://job-scheduling-api.vercel.app/job', {
             params: {
             }
           })
