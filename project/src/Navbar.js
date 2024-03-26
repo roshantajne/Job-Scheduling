@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-const Navbar = () => {
+const Navbar1 = () => {
     return(
         <>
         <Navbar1 bg="light" data-bs-theme="light">
@@ -21,4 +21,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default Navbar1;
