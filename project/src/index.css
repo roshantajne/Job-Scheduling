@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 * {
   margin: 0;
@@ -10,6 +9,10 @@
 
 .navbar {
   background-color: #fff;
+  position: fixed; /* Fix navbar position */
+  top: 0; /* Align navbar to the top */
+  width: 100%; /* Make navbar full width */
+  z-index: 999; /* Ensure navbar stays on top */
 }
 
 .navbar-brand {
@@ -17,7 +20,7 @@
   color: #565387;
 }
 
-.navbar a{
+.navbar a {
   font-size: 1.3rem;
   text-transform: capitalize;
 }
@@ -46,27 +49,31 @@
 
 #header {
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - 70px); /* Adjust height to avoid overlapping with navbar */
   margin-top: 70px;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Align text to center */
 }
 
-#header h1{
+#header h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
   color: black;
 }
 
-#header .brand-name{
+#header .brand-name {
   color: #3498db;
 }
 
-#header h2{
+#header h2 {
   color: #484848;
   font-size: 24px;
 }
 
-#header .btn-outline-primary{
+#header .btn-outline-primary {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -85,10 +92,10 @@
 }
 
 .header-img {
-  text-align: right;
+  max-width: 100%; /* Ensure image doesn't overflow its container */
 }
 
-#header .animated{
+#header .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
@@ -104,7 +111,7 @@
   }
 }
 
-@keyframes up-down{
+@keyframes up-down {
   0% {
     transform: translateY(20px);
   }
@@ -112,7 +119,7 @@
   50% {
     transform: translateX(10px);
   }
-  100%{
+  100% {
     transform: translateY(-20px);
   }
 }
@@ -121,22 +128,15 @@
 .input-group-append {
   cursor: pointer;
 }
- /* Map CSS */
 
- .leaflet-container {
-  width: 0%;
-  height: 0%;
- }
+/* Map CSS */
 
- /* Css for spinner */
- /* @keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
+.leaflet-container {
+  width: 100%; /* Ensure map fills its container */
+  height: 100%; /* Ensure map fills its container */
+}
+
+/* Css for spinner */
 /* .loading-spinner {
   width: 50px;
   height: 50px;
@@ -145,6 +145,7 @@
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
 } */
+
 /* 
 .spinner-container {
   display: grid;
@@ -153,9 +154,8 @@
   height: 350px;
 } */
 
-#table{
+#table {
   width: 80%;
   border: 1px solid;
-  margin-left: 160px;
-  margin-top: 50px;
+  margin: 50px auto; /* Center table horizontally and add space at the top */
 }
